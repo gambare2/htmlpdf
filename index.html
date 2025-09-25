@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Congestion Prediction Poster</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-main: #faf9f6;
+            --bg-card: #ffffff;
+            --bg-header: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            --accent-1: #ff6b6b;
+            --accent-2: #0480b9;
+            --text-dark: #2c2c2c;
+            --text-light: #555;
+        }
+
+        .circle {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            margin: 0 auto;
+        }
+
+        .circle.linear {
+            background: conic-gradient(var(--accent-1) 71%, #ddd 0);
+        }
+
+        .circle.rf {
+            background: conic-gradient(#4ecdc4 85%, #ddd 0);
+        }
+
+        .circle.lstm {
+            background: conic-gradient(#6a11cb 90%, #ddd 0);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 p-6 font-[Poppins]">
+    <div class="poster max-w-[1800px] mx-auto aspect-[4/3] bg-white rounded-2xl shadow-2xl flex flex-col p-6">
+
+        <!-- Header -->
+        <header class="text-center mb-4">
+            <h1 class="text-3xl font-bold text-white px-6 py-3 rounded-lg inline-block shadow"
+                style="background: var(--bg-header);">
+                Traffic Congestion Prediction with Machine Learning and Deep Learning
+            </h1>
+
+            <h2 class="text-2xl font-semibold text-gray-700">Dr. Bhimrao Ambedkar University</h2>
+            <h3 class="text-xl text-blue-600">Institute of Engineering, Agra</h3>
+        </header>
+
+        <!-- Author details -->
+        <div class="text-center mb-6">
+            <h2 class="text-xl font-semibold">Traffic Congestion Prediction (Smart City Analytics)</h2>
+            <div class="grid grid-cols-4 gap-4 mt-3">
+                <div>
+                    <p class="font-bold">Prince Aryan Singh</p>
+                    <p class="text-sm text-[var(--accent-2)]"><i class="far fa-envelope"></i> sprincearyan@gmail.com</p>
+                    <p class="text-xs text-gray-500">Dr. Bhimrao Ambedkar University</p>
+                    <p class="text-xs">B.E. CSE</p>
+                </div>
+                <div>
+                    <p class="font-bold">Tabish Ahmad</p>
+                    <p class="text-sm text-[var(--accent-2)]"><i class="far fa-envelope"></i> tabishansari1975@gmail.com
+                    </p>
+                    <p class="text-xs text-gray-500">Dr. Bhimrao Ambedkar University</p>
+                    <p class="text-xs">B.E. CSE</p>
+                </div>
+                <div>
+                    <p class="font-bold">Vishal Gautam</p>
+                    <p class="text-sm text-[var(--accent-2)]"><i class="far fa-envelope"></i>
+                        Vishal.gautam.ietagra@gmail.com</p>
+                    <p class="text-xs text-gray-500">Dr. Bhimrao Ambedkar University</p>
+                    <p class="text-xs">B.E. CSE</p>
+                </div>
+                <div>
+                    <p class="font-bold">Sachin Kumar Gautam</p>
+                    <p class="text-sm text-[var(--accent-2)]"><i class="far fa-envelope"></i>
+                        sachin9935chaudhary@gmail.com</p>
+                    <p class="text-xs text-gray-500">Dr. Bhimrao Ambedkar University</p>
+                    <p class="text-xs">B.E. CSE</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content: 3-column grid -->
+        <main class="grid grid-cols-4 gap-4 flex-grow">
+
+            <!-- Column 1 -->
+            <div class="flex flex-col gap-4">
+                <section class="bg-white rounded-xl shadow p-4">
+                    <h2 class="text-lg font-bold text-white px-3 py-2 rounded" style="background: var(--bg-header);">
+                        Abstract</h2>
+                    <div class="text-sm text-gray-700 mt-2">
+                        <p>
+                            Traffic congestion is a critical urban challenge, causing delays, wasted fuel, and
+                            environmental harm.
+                            As Smart City initiatives expand, predictive analytics has become vital for sustainable
+                            mobility. This study compares three approaches—<strong>Linear Regression</strong>,
+                            <strong>Random Forest</strong>, and <strong>LSTM networks</strong>—on the Metro Interstate
+                            Traffic
+                            Volume dataset, which integrates weather, holiday, and temporal features.
+                        </p>
+                        <p class="mt-2">
+                            Results show that <strong>LSTM consistently outperforms</strong> traditional and ensemble
+                            models,
+                            delivering higher accuracy and lower error values. These findings highlight the potential of
+                            deep
+                            learning for <strong>adaptive traffic control</strong>, <strong>real-time routing</strong>,
+                            and
+                            <strong>sustainable transport strategies</strong>.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="bg-white rounded-xl shadow p-4">
+                    <h2 class="text-lg font-bold text-white px-3 py-2 rounded" style="background: var(--bg-header);">
+                        Introduction</h2>
+                    <p class="text-sm text-gray-700 mt-2">
+                        Urbanization and rising vehicle ownership have overwhelmed existing road networks, costing
+                        billions
+                        in lost productivity and increasing emissions. Predicting traffic patterns allows authorities to
+                        act
+                        proactively through adaptive signals, rerouting, and promoting public transit. With the advent
+                        of
+                        <strong>5G networks</strong> and connected vehicles, predictive systems will be central to
+                        intelligent
+                        transportation.
+                    </p>
+                    <p class="text-sm text-gray-700 mt-2">
+                        Traditional traffic management strategies often struggle with sudden fluctuations caused by
+                        weather,
+                        holidays, or unexpected events. By combining historical patterns with real-time data,
+                        <strong>machine learning</strong> and <strong>deep learning models</strong> provide cities with
+                        the ability
+                        to anticipate congestion before it happens and respond more effectively.
+                    </p>
+                </section>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="flex flex-col gap-4">
+
+
+                <section class="bg-white rounded-xl shadow p-4">
+                    <h2 class="text-lg font-bold text-white px-3 py-2 rounded" style="background: var(--bg-header);">
+                        Dataset</h2>
+                    <ul class="text-sm text-gray-700 mt-2 space-y-1">
+                        <li><i class="fas fa-car text-red-500"></i> <b>Traffic Volume</b> – vehicles/hour</li>
+                        <li><i class="fas fa-cloud text-blue-500"></i> <b>Weather</b> – temperature, rain, snow, cloud
+                            cover</li>
+                        <li><i class="fas fa-calendar-day text-green-600"></i> <b>Holidays</b> – event indicators</li>
+                        <li><i class="fas fa-clock text-yellow-500"></i> <b>Temporal</b> – time of day, weekday/weekend,
+                            rush hours</li>
+                    </ul>
+                    <p class="text-sm mt-2">Data preprocessing included handling missing values, normalizing, and
+                        engineering temporal features before splitting into 70% training and 30% testing sets.</p>
+                </section>
+
+                <!-- Decorative Visual -->
+                <section class="bg-white rounded-xl shadow p-4">
+                    <div class="bg-gray-100 border rounded-lg p-4 text-center">
+                        <div class="flex justify-around items-center mb-2">
+                            <i class="fas fa-car text-red-500 text-2xl"></i>
+                            <i class="fas fa-bus text-blue-500 text-2xl"></i>
+                            <i class="fas fa-car-side text-green-600 text-2xl"></i>
+                        </div>
+                        <div class="flex justify-center items-center">
+                            <i class="fas fa-road text-gray-600 text-3xl"></i>
+                            <i class="fas fa-traffic-light text-yellow-500 text-2xl mx-4"></i>
+                            <i class="fas fa-road text-gray-600 text-3xl"></i>
+                        </div>
+                        <p class="text-xs mt-2 text-gray-600">Schematic of an urban traffic corridor with mixed vehicles
+                            and signals</p>
+                    </div>
+                </section>
+                <section class="bg-white rounded-xl shadow p-4">
+                    <h2 class="text-lg font-bold text-white px-3 py-2 rounded" style="background: var(--bg-header);">
+                        Literature Review</h2>
+                    <p class="text-sm text-gray-700 mt-2">Earlier models such as <b>ARIMA</b> and <b>Kalman Filters</b>
+                        work well for simple time-series, but fail under complex traffic patterns. Advances include:</p>
+                    <ul class="list-disc pl-5 text-sm mt-2 space-y-1">
+                        <li><i class="fas fa-tree text-green-600"></i> <b>Random Forest</b>: Handles nonlinear
+                            relationships, reduces overfitting.</li>
+                        <li><i class="fas fa-brain text-purple-600"></i> <b>LSTM</b>: Captures long-term dependencies in
+                            sequential data.</li>
+                    </ul>
+                    <p class="text-sm mt-2">Recent studies confirm that LSTM models consistently outperform traditional
+                        and ensemble approaches in real-world traffic prediction tasks.</p>
+                </section>
+
+            </div>
+
+            <div class="flex flex-col gap-4">
+                <section class="bg-white rounded-xl shadow p-4">
+                    <h2 class="text-lg font-bold text-white px-3 py-2 rounded" style="background: var(--bg-header);">
+                        Results</h2>
+                    <div class="grid grid-cols-3 gap-4 mt-4">
+                        <div class="text-center">
+                            <div class="circle linear">0.71</div>
+                            <p class="text-xs mt-1">Linear Regression</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="circle rf">0.85</div>
+                            <p class="text-xs mt-1">Random Forest</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="circle lstm">0.90</div>
+                            <p class="text-xs mt-1">LSTM</p>
+                        </div>
+                    </div>
+                    <p class="text-sm mt-3 text-gray-700"><b>LSTM achieved the highest accuracy</b>, reducing error and
+                        capturing
+                        time-based fluctuations far better than classical or ensemble models.</p>
+                </section>
+                <section class="bg-white rounded-xl shadow p-4">
+                    <h2 class="text-lg font-bold text-white px-3 py-2 rounded" style="background: var(--bg-header);">
+                        Methodology</h2>
+                    <ol class="list-decimal pl-5 text-sm text-gray-700 mt-2 space-y-1">
+                        <li>Data Preprocessing – cleaning, normalization, feature extraction.</li>
+                        <li>Modeling – Linear Regression, Random Forest, LSTM.</li>
+                        <li>Evaluation – using MAE, RMSE, and R² metrics.</li>
+                    </ol>
+                </section>
+
+                <section class="bg-white rounded-xl shadow p-4">
+                    <h2 class="text-lg font-bold text-white px-3 py-2 rounded" style="background: var(--bg-header);">
+                        Pipeline</h2>
+                    <div class="flex items-center justify-between mt-4">
+                        <div class="text-center">
+                            <div
+                                class="w-14 h-14 flex items-center justify-center rounded-full bg-blue-200 text-blue-700">
+                                <i class="fas fa-database text-xl"></i>
+                            </div>
+                            <p class="text-xs mt-1">Data</p>
+                        </div>
+                        <i class="fas fa-arrow-right text-gray-500"></i>
+                        <div class="text-center">
+                            <div
+                                class="w-14 h-14 flex items-center justify-center rounded-full bg-green-200 text-green-700">
+                                <i class="fas fa-cogs text-xl"></i>
+                            </div>
+                            <p class="text-xs mt-1">Processing</p>
+                        </div>
+                        <i class="fas fa-arrow-right text-gray-500"></i>
+                        <div class="text-center">
+                            <div
+                                class="w-14 h-14 flex items-center justify-center rounded-full bg-purple-200 text-purple-700">
+                                <i class="fas fa-brain text-xl"></i>
+                            </div>
+                            <p class="text-xs mt-1">Prediction</p>
+                        </div>
+                        <i class="fas fa-arrow-right text-gray-500"></i>
+                        <div class="text-center">
+                            <div
+                                class="w-14 h-14 flex items-center justify-center rounded-full bg-yellow-200 text-yellow-700">
+                                <i class="fas fa-chart-line text-xl"></i>
+                            </div>
+                            <p class="text-xs mt-1">Results</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Column 4 -->
+            <div class="flex flex-col gap-4">
+                <section class="bg-white rounded-xl shadow p-4">
+                    <h2 class="text-lg font-bold text-white px-3 py-2 rounded" style="background: var(--bg-header);">
+                        Conclusion</h2>
+                    <p class="text-sm text-gray-700 mt-2">Deep learning, particularly <b>LSTM</b>, proved most effective
+                        in
+                        forecasting congestion. These models enable adaptive traffic lights, dynamic rerouting, and
+                        policy planning,
+                        while reducing delays, fuel use, and emissions. Such predictive analytics directly support the
+                        goals of
+                        <b>smart, sustainable cities</b>.
+                    </p>
+                </section>
+
+                <section class="bg-white rounded-xl shadow p-4">
+                    <h2 class="text-lg font-bold text-white px-3 py-2 rounded" style="background: var(--bg-header);">
+                        Future Work</h2>
+                    <ul class="list-disc pl-5 text-sm text-gray-700 mt-2">
+                        <li><i class="fas fa-satellite"></i> Real-time IoT & GPS stream integration</li>
+                        <li><i class="fas fa-users"></i> Incorporating socio-economic and event features</li>
+                        <li><i class="fas fa-project-diagram"></i> Hybrid deep learning models (LSTM + GNN/Attention)
+                        </li>
+                        <li><i class="fas fa-traffic-light"></i> Deployment in smart infrastructure</li>
+                    </ul>
+                </section>
+
+                <section class="bg-white rounded-xl shadow p-4">
+                    <h2 class="text-lg font-bold text-white px-3 py-2 rounded" style="background: var(--bg-header);">
+                        Keywords</h2>
+                    <p class="text-xs mt-2">Traffic Congestion, Smart City Analytics, Machine Learning, LSTM, Urban
+                        Mobility,
+                        Intelligent Transport, Deep Learning</p>
+                </section>
+
+                <section class="bg-white rounded-xl shadow p-4">
+                    <h2 class="text-lg font-bold text-white px-3 py-2 rounded" style="background: var(--bg-header);">
+                        References</h2>
+                    <ul class="text-xs list-disc pl-5 mt-2 space-y-1">
+                        <li>Reinsel et al., “Digitization of the World,” IDC, 2018.</li>
+                        <li>Zheng et al., “Urban Computing: Concepts and Practices,” 2016.</li>
+                        <li>Dean & Ghemawat, “MapReduce: Simplified Data Processing,” 2004.</li>
+                        <li>Zaharia et al., “Apache Spark: Unified Analytics Engine,” 2016.</li>
+                    </ul>
+                </section>
+            </div>
+
+        </main>
+    </div>
+</body>
+
+</html>
